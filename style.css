@@ -1,0 +1,171 @@
+/* ===== FARGER OG INNSTILLINGER =====
+   Endre verdiene her for å skifte utseende på hele siden. */
+:root {
+  --hovedfarge: #b7aa8b;      /* knapper og lenker */
+  --morkfarge: #ff00fb;       /* topp- og bunnfelt, overskrifter */
+  --tekstfarge: #ff0000;      /* vanlig tekst */
+  --bakgrunn: #816e6e;        /* sidens bakgrunn */
+  --lys-bakgrunn: #000000;    /* bakgrunn på utvalgte seksjoner */
+  --skrifttype: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+/* ===== GRUNNLEGGENDE ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* myk rulling når du klikker i menyen */
+}
+
+body {
+  font-family: var(--skrifttype);
+  color: var(--tekstfarge);
+  background: var(--bakgrunn);
+  line-height: 1.6;
+}
+
+/* Holder innholdet midtstilt og passe bredt */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  color: var(--hovedfarge);
+}
+
+h2 {
+  color: var(--morkfarge);
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+h3 {
+  color: var(--morkfarge);
+  margin-bottom: 8px;
+}
+
+section {
+  padding: 64px 0;
+}
+
+.lys {
+  background: var(--lys-bakgrunn);
+}
+
+/* ===== TOPPFELT ===== */
+header {
+  background: var(--morkfarge);
+  position: sticky;   /* blir stående øverst når du ruller */
+  top: 0;
+  z-index: 10;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: var(--morkfarge);
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero h2 {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.hero p {
+  max-width: 560px;
+  margin: 0 auto 28px;
+  color: #cbd5e1;
+}
+
+/* ===== KNAPP ===== */
+.knapp {
+  display: inline-block;
+  background: var(--hovedfarge);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.knapp:hover {
+  opacity: 0.9;
+}
+
+/* ===== KORT (tjenester) ===== */
+.kort-rad {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.kort {
+  flex: 1 1 250px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== BUNNFELT ===== */
+footer {
+  background: var(--morkfarge);
+  color: #94a3b8;
+  text-align: center;
+  padding: 24px 0;
+}
+.ad-banner {
+    background: yellow;
+    color: black;
+    border: 4px dashed red;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 728px;
+    text-align: center;
+    font-family: "Comic Sans MS", cursive;
+}
+
+.ad-banner a {
+    color: red;
+    font-weight: bold;
+}
+/* ===== MOBIL ===== */
+@media (max-width: 600px) {
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+  nav a {
+    margin: 0 12px 0 0;
+  }
+}
